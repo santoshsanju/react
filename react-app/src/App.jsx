@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
+const name = "Santosh";
 function Logo() {
   return (<><div>
     <a href="https://vitejs.dev" target="_blank">
@@ -21,17 +22,7 @@ function App() {
   return (
     <>
       <Logo />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>{name}</h1>
     </>
   );
 }
