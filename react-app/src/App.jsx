@@ -1,27 +1,23 @@
-import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
 const name = "Santosh";
-function Logo() {
+function Logo(props) {
   return (<><div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src={viteLogo} className="logo" alt="Vite logo" />
-    </a>
-    <a href="https://react.dev" target="_blank">
-      <img src={reactLogo} className="logo react" alt="React logo" />
+    <a href={props.link} target="_blank">
+      <img src={props.srcName} className={props.class + " logo"} alt={props.altName + " logo"} />
     </a>
   </div>
-    <h1>Vite + React</h1></>);
+  </>);
 }
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <Logo />
+      <Logo link="https://vitejs.dev" srcName={viteLogo} class="" altName="Vite" />
+      <Logo link="https://react.dev" srcName={reactLogo} class="react" altName="React" />
+      <h1>Vite + React</h1>
       <h1>{name}</h1>
     </>
   );
