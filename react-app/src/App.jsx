@@ -9,13 +9,16 @@ const name = "Santosh";
 const data = [{ link: "https://vitejs.dev", srcName: viteLogo, classes: "", altName: "Vite" }, { link: "https://react.dev", srcName: reactLogo, classes: "react", altName: "React" }];
 
 function App() {
+  function changeHandler() {
+    console.log("Hello");
+  }
   return (
     <>
       <Logo {...data[0]} />
       <Logo {...data[1]} />
       <h1>Vite + React</h1>
       <h1>{name}</h1>
-      <ButtonClick>Change</ButtonClick>
+      <ButtonClick onSelect={changeHandler}>Change</ButtonClick>
     </>
   );
 }
