@@ -4,13 +4,14 @@ import Logo from './Components/Logo';
 import ButtonClick from './Components/ButtonClick';
 import './App.css';
 
-const name = "Santosh";
+let name = "Santosh";
 
 const data = [{ link: "https://vitejs.dev", srcName: viteLogo, classes: "", altName: "Vite" }, { link: "https://react.dev", srcName: reactLogo, classes: "react", altName: "React" }];
 
 function App() {
   function changeHandler(args) {
-    console.log("Hello" + args);
+    name = name + " Molleti";
+    console.log("Hello" + name + args);
   }
   return (
     <>
