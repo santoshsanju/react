@@ -1,5 +1,10 @@
 export default function ButtonClick(props) {
+  function changeHandler() {
+    console.log("Hello");
+  }
   return (
-    <button>{props.children}</button>
+    <>
+      <button onClick={changeHandler}>{props.children}</button>
+    </>
   );
 }
