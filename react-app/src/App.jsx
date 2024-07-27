@@ -25,6 +25,7 @@ function App() {
       {name === 'Santosh' ? <Logo {...data[0]} /> : <Logo {...data[1]} />}
       {title}
       <h1>{name}</h1>
+      {data.map(prop => <Logo {...prop} />)}
       <ButtonClick onSelect={() => changeHandler(" Bro")}>Change</ButtonClick>
     </>
   );
