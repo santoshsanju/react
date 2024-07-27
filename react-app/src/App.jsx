@@ -1,17 +1,18 @@
+import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import Logo from './Components/Logo';
 import ButtonClick from './Components/ButtonClick';
 import './App.css';
 
-let name = "Santosh";
 
 const data = [{ link: "https://vitejs.dev", srcName: viteLogo, classes: "", altName: "Vite" }, { link: "https://react.dev", srcName: reactLogo, classes: "react", altName: "React" }];
 
 function App() {
+  const [name, setName] = useState("Santosh");
   function changeHandler(args) {
-    name = name + " Molleti";
-    console.log("Hello" + name + args);
+    setName(name + " Molleti " + args);
+    console.log(name);
   }
   return (
     <>
