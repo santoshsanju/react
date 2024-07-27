@@ -10,15 +10,20 @@ const data = [{ link: "https://vitejs.dev", srcName: viteLogo, classes: "", altN
 
 function App() {
   const [name, setName] = useState("Santosh");
+  let title = <h1>Vite + React</h1>;
   function changeHandler(args) {
     setName(name + " Molleti " + args);
     console.log(name);
   }
+  if (name === 'Santosh') {
+    title = <h1>Vite</h1>;
+  } else {
+    title = <h1>React</h1>;
+  }
   return (
     <>
-      <Logo {...data[0]} />
-      <Logo {...data[1]} />
-      <h1>Vite + React</h1>
+      {name === 'Santosh' ? <Logo {...data[0]} /> : <Logo {...data[1]} />}
+      {title}
       <h1>{name}</h1>
       <ButtonClick onSelect={() => changeHandler(" Bro")}>Change</ButtonClick>
     </>
