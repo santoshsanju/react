@@ -1,6 +1,7 @@
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import Logo from './Components/Logo';
+import ButtonClick from './Components/ButtonClick';
 import './App.css';
 
 const name = "Santosh";
@@ -14,6 +15,7 @@ function App() {
       <Logo {...data[1]} />
       <h1>Vite + React</h1>
       <h1>{name}</h1>
+      <ButtonClick>Change</ButtonClick>
     </>
   );
 }
