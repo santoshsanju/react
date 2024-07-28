@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import Logo from './Components/Logo';
 import ButtonClick from './Components/ButtonClick';
+import DynamicComponent from './Components/DynamicComponent';
 import './App.css';
 
 
@@ -27,6 +28,9 @@ function App() {
       <h1>{name}</h1>
       {data.map(prop => <Logo {...prop} key={prop.altName} />)}
       <ButtonClick onSelect={() => changeHandler(" Bro")}>Change</ButtonClick>
+      <DynamicComponent data={["React", "NextJS", "MongoDb"]} tags={<><h1>Must Complete</h1><div>List of courses</div></>}>
+        Learning Started
+      </DynamicComponent>
     </>
   );
 }
