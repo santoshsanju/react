@@ -1,7 +1,7 @@
-export default function DynamicComponent({ data, children, tags }) {
+export default function DynamicComponent({ data, children, tags, ListContainer }) {
   return (<>
     {tags}
-    <menu>{data.map(val => <li key={val}>{val}</li>)}</menu>
+    <ListContainer>{data.map(val => <li key={val}>{val}</li>)}</ListContainer>
     {children}
   </>);
 }

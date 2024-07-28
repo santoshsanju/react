@@ -28,7 +28,7 @@ function App() {
       <h1>{name}</h1>
       {data.map(prop => <Logo {...prop} key={prop.altName} />)}
       <ButtonClick onSelect={() => changeHandler(" Bro")}>Change</ButtonClick>
-      <DynamicComponent data={["React", "NextJS", "MongoDb"]} tags={<><h1>Must Complete</h1><div>List of courses</div></>}>
+      <DynamicComponent data={["React", "NextJS", "MongoDb"]} tags={<><h1>Must Complete</h1><div>List of courses</div></>} ListContainer="menu">
         Learning Started
       </DynamicComponent>
     </>
