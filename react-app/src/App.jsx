@@ -13,7 +13,8 @@ function App() {
   const [name, setName] = useState("Santosh");
   let title = <h1>Vite + React</h1>;
   function changeHandler(args) {
-    setName(name + " Molleti " + args);
+    // setName(name + " Molleti " + args); In react updating date depends on previous state we should use function
+    setName((exName) => exName + " Mollet " + args);
     console.log(name);
   }
   if (name === 'Santosh') {
