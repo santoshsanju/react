@@ -22,14 +22,17 @@ function App() {
   } else {
     title = <h1>React</h1>;
   }
+  function sendingToChange(args) {
+    setName(args + " Bhaskara");
+  }
   return (
     <>
       {name === 'Santosh' ? <Logo {...data[0]} /> : <Logo {...data[1]} />}
       {title}
       <h1>{name}</h1>
       {data.map(prop => <Logo {...prop} key={prop.altName} />)}
-      <ButtonClick onSelect={() => changeHandler(" Bro")}>Change</ButtonClick>
-      <DynamicComponent data={["React", "NextJS", "MongoDb"]} tags={<><h1>Must Complete</h1><div>List of courses</div></>} ListContainer="menu">
+      <ButtonClick onSelect={() => changeHandler(" Bro")} onSending={(data) => sendingToChange(data)}>Change</ButtonClick>
+      <DynamicComponent data={["React", "NextJS", "MongoDb"]} tags={<><h1>Must Complete</h1><div>List of courses</div></>} ListContainer="menu" forName={name}>
         Learning Started
       </DynamicComponent>
     </>
